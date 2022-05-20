@@ -6,15 +6,18 @@
 
 int main()
 {
-    int year = 2022;
+    int year[] = { 2022,1,2024,2100,2000 ,-1 };
 
-    if (is_leap_year(year))
-    {
-        std::cout << year << "年は、うるう年です\n";
-    }
-    else {
-        std::cout << year << "年は、平年です\n";
-    }
+    for (int i = 0; year[i] != -1; i++) {
+
+        if (is_leap_year(year[i]))
+        {
+            std::cout << year[i] << "年は、うるう年です\n";
+        }
+        else {
+            std::cout << year[i] << "年は、平年です\n";
+        }
+    }//0がくるまで
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
